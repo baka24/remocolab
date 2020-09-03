@@ -286,7 +286,7 @@ def _setupVNC():
   my_apt.installDebPackage("virtualgl.deb")
   my_apt.installDebPackage("turbovnc.deb")
 
-  my_apt.installPkg("plasma-desktop", "xorg", "sddm", "plasma-nm", "konsole", "dolphin", "ark ", "plasma-workspace-wayland")
+  my_apt.installPkg("plasma-desktop", "xorg", "sddm", "plasma-nm", "konsole", "dolphin", "ark", "plasma-workspace-wayland")
   my_apt.commit()
   my_apt.close()
 
