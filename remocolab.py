@@ -146,7 +146,7 @@ def _setupSSHDImpl(ngrok_token, ngrok_region, is_VNC):
 
   root_password = secrets.token_urlsafe()
   user_password = secrets.token_urlsafe()
-  user_name = "colab"
+  user_name = "JL24"
   msg += "✂️"*24 + "\n"
   msg += f"root password: {root_password}\n"
   msg += f"{user_name} password: {user_password}\n"
@@ -258,7 +258,7 @@ def _setup_nvidia_gl():
 
   #!service lightdm stop
   subprocess.run(["/opt/VirtualGL/bin/vglserver_config", "-config", "+s", "+f"], check = True)
-  #user_name = "colab"
+  #user_name = "JL24"
   #!usermod -a -G vglusers $user_name
   #!service lightdm start
 
@@ -286,7 +286,7 @@ def _setupVNC():
   my_apt.installDebPackage("virtualgl.deb")
   my_apt.installDebPackage("turbovnc.deb")
 
-  my_apt.installPkg("xfce4", "xfce4-terminal")
+  my_apt.installPkg("plasma-desktop", "xorg", "sddm", "plasma-nm", "konsole", "dolphin", "ark ", "plasma-workspace-wayland")
   my_apt.commit()
   my_apt.close()
 
@@ -331,7 +331,7 @@ subprocess.run(
 (pathlib.Path.home() / ".xscreensaver").write_text("mode: off\\n")
 """)
   r = subprocess.run(
-                    ["su", "-c", "python3 " + str(vncrun_py), "colab"],
+                    ["su", "-c", "python3 " + str(vncrun_py), "JL24"],
                     check = True,
                     stdout = subprocess.PIPE,
                     universal_newlines = True)
