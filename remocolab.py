@@ -286,7 +286,7 @@ def _setupVNC():
   my_apt.installDebPackage("virtualgl.deb")
   my_apt.installDebPackage("turbovnc.deb")
 
-  my_apt.installPkg( "xorg", "xinit", "i3", "thunar", "thunar-archive-plugin")
+  my_apt.installPkg( "xorg", "xinit", "i3", "thunar", "thunar-archive-plugin", "xfce4-terminal")
   my_apt.commit()
   my_apt.close()
 
